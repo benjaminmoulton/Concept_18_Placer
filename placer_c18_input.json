@@ -1,7 +1,7 @@
 {
     "run" : ["Placed"],
     "Placed" : {
-        "distributions file" : "distributions_Sep22_2020.dist",
+        "distributions file" : "distributions_Oct01_2020.dist",
         "write as" : "spline",
         "plane line length" : 1.0,
         "actuators per semispan" : 5,
