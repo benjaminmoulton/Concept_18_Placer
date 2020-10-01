@@ -1,0 +1,71 @@
+{
+    "CG" : [0.0, 0.0, 0.0], 
+    "CG_note": "we will need to determine cg location",
+    "weight" : 10.0,
+    "reference" : {
+        "note": "including these here means MUX doesn't have to compute it saving time",
+        "area": 12.29923797666569,
+        "longitudinal_length": 1.2399212835586666,
+        "lateral_length": 9.91936999529998
+    },
+    "controls": {
+        "sym": {
+            "is_symmetric": true
+        },
+        "asym": {
+            "is_symmetric": false
+        }
+    },
+    "airfoils": {
+        "NACA2412_parabolicflap": {
+            "type": "linear",
+            "note": "this will be changed to a poly type eventually",
+            "geometry": {
+                "NACA": "2412"
+            }
+        }
+    },
+    "wings" : {
+        "wing" : {
+            "ID" : 1,
+            "side" : "both",
+            "is_main" : true,
+            "semispan" : 4.95968499764999,
+            "sweep" : [[0.0, 0.0],
+                       [1.0, 40.5]],
+            "dihedral" : [[0.0, 0.0],
+                          [1.0, 10.0]],
+            "chord": 1.0,
+            "grid" : {
+                "N" : 30,
+                "wing_ID": 0
+            },
+            "control_surface": {
+                "chord_fraction": 0.5,
+                "control_mixing": {
+                    "sym": 1.0,
+                    "asym": 1.0
+                }
+            }
+        },
+        "winglet": {
+            "ID": 2,
+            "side": "both",
+            "is_main": false,
+            "connect_to": {
+                "ID": 1
+            },
+            "semispan": 0.551076110849999,
+            "sweep": [[0.0, 40.5],
+                      [1.0, 45.0]],
+            "dihedral": [[0.0, 10.0],
+                         [1.0, 75.0]],
+            "chord": [[0.0, 0.9166666666666666],
+                      [1.0, 0.22916666666666666]],
+            "grid": {
+                "N": 10,
+                "wing_ID": 0
+            }
+        }
+    }
+}
